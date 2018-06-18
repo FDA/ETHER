@@ -1,0 +1,116 @@
+
+# Rule 2: EVENT - SIGNAL - TIMEX
+# ==============================
+#
+# - intra-sentential EVENT-TIMEX3 pairs
+# - SIGNAL occuring between EVENT and TIMEX3
+
+# Implied Features:
+#
+#  - arg1.tag = EVENT
+#  - arg2.tag = TIMEX3
+#  - sameSentence = YES
+#
+# Other features:
+#
+#  - signal = <string>
+#  - relation = <TimemlRel>
+#	any timeml relation
+#  - confidence = <float>
+#	always 1 if rules have not been trained,
+#	otherwise a number from 0 to 1
+
+ruleNum=2-1
+	signal=in
+	confidence=1
+	relation=IS_INCLUDED
+
+ruleNum=2-2
+	signal=during
+	confidence=0.8
+	relation=IS_INCLUDED
+
+ruleNum=2-3
+	signal=on
+	confidence=1
+	relation=IS_INCLUDED
+
+ruleNum=2-4
+	signal=at
+	confidence=1
+	relation=IS_INCLUDED
+
+ruleNum=2-5
+	signal=over
+	confidence=0.8
+	relation=IS_INCLUDED
+
+ruleNum=2-6
+	signal=for
+	confidence=0.5
+	relation=IS_INCLUDED
+
+ruleNum=2-7
+	signal=of
+	confidence=1
+	relation=AFTER
+
+ruleNum=2-8
+	signal=before
+	confidence=0.5
+	relation=BEFORE
+
+ruleNum=2-9
+	signal=after
+	confidence=0.5
+	relation=AFTER
+
+ruleNum=2-10
+	signal=when
+	confidence=0.8
+	relation=IS_INCLUDED
+
+ruleNum=2-11
+	signal=since
+	confidence=0.6
+	relation=BEGUN_BY
+
+ruleNum=2-12
+	signal=from
+	confidence=0.6
+	relation=BEGUN_BY
+
+ruleNum=2-13
+	signal=until
+	confidence=0.6
+	relation=ENDED_BY
+	
+ruleNum=2-14
+	signal=prior
+	confidence=0.6
+	relation=BEFORE
+
+ruleNum=2-15
+	signal=later
+	confidence=0.5
+	relation=AFTER
+	
+ruleNum=2-16
+	signal=earlier
+	confidence=0.5
+	relation=BEFORE
+	
+ruleNum=2-17
+	signal=post
+	confidence=0.5
+	relation=AFTER
+	
+ruleNum=2-18
+	signal=within
+	confidence=0.6
+	relation=ENDED_BY
+	
+ruleNum=2-19
+	signal=ago
+	confidence=0.5
+	relation=BEFORE
